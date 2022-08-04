@@ -8,8 +8,6 @@ const input = readline.createInterface({
 let flag = true;
 let mainQ;
 
-
-
 const question = () => {
     return new Promise((res) => {
         if(flag){
@@ -60,7 +58,7 @@ const coins = () => {
         setTimeout(() => {
             const coin = new Coin()
             coin.setSide();
-            returnGame();
+            main()
             res()
         }, 1000)
 
@@ -69,15 +67,7 @@ const coins = () => {
 
 const main = async () => {
     await question()
-    // input.close();
     await coins()
-
 }
 
-main()
-
-var returnGame = function () {
-    main()
-
-};
-
+let n;
